@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="calculatricerpn" />
+        <module name="pglp_4.2" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="calculatricerpn" target="1.5" />
+      <module name="pglp_4.2" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

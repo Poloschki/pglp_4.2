@@ -25,7 +25,19 @@ public class SaisieRPN {
         while (!line.equals("exit")) {
             if(line.equals("+")||line.equals("-")||line.equals("*")||line.equals("/"))
             {
-                this.m.operation(line);
+                if (line.equals("+")) {
+                    this.m.operation(Operation.PLUS);
+                }
+                if (line.equals("-")) {
+                    this.m.operation(Operation.MOINS);
+                }
+                if (line.equals("*")) {
+                    this.m.operation(Operation.MULT);
+                }
+                if (line.equals("/")) {
+                    this.m.operation(Operation.DIV);
+                }
+
             }
             else
             {
@@ -35,7 +47,7 @@ public class SaisieRPN {
                 catch(NumberFormatException e){
                     assert e.getMessage().equals("Format non respecté");
                 }
-                this.m.operation(line);
+                this.m.Enregistrer(line);
             }
             this.m.afficheoperandes();
             sc =new Scanner(System.in);
