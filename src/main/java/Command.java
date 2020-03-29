@@ -1,4 +1,5 @@
-abstract public class Command implements Cloneable {
-    public abstract void execute();
+interface Command {
+
+    void execute();
 
 }
