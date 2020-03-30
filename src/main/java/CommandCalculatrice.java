@@ -1,18 +1,37 @@
-public class CommandCalculatrice extends Interpreter {
+import java.util.HashMap;
 
+public class CommandCalculatrice {
 
-    public CommandCalculatrice() {
-        commandHashMap.put("undo", new Undo(this));
-        commandHashMap.put("quit", new Quit(this));
-        commandHashMap.put("+", new CommandOperation(Operation.PLUS, this));
-        commandHashMap.put("-", new CommandOperation(Operation.MOINS, this));
-        commandHashMap.put("*", new CommandOperation(Operation.MULT, this));
-        commandHashMap.put("/", new CommandOperation(Operation.DIV, this));
+    protected HashMap<String, Command> commandHashMap = new HashMap<>();
+    protected MoteurRPN moteurRPN;
+
+    public CommandCalculatrice(MoteurRPN moteurRPN) {
+        this.moteurRPN = moteurRPN;
+        this.register("undo", new Undo(this.moteurRPN));
+        this.register("quit", new Quit(this.moteurRPN));
+        this.register("calcul", new CommandOperation(Operation.PLUS, this.moteurRPN));
+        this.register("enregistre", new Enregistrement(this.moteurRPN, 1.0));
 
     }
 
-    public void register(String oommandName, Command command) {
-        commandHashMap.put(oommandName, command);
+    public void register(String commandName, Command command) {
+        commandHashMap.put(commandName, command);
+    }
+
+    public void setOperation(Operation operation) {
+        CommandOperation tmp;
+        if (commandHashMap.containsKey("calcul")) {
+            tmp = (CommandOperation) this.commandHashMap.get("calcul");
+            tmp.setOperation(operation);
+        }
+    }
+
+    public void setEnregistrement(double valeur) {
+        Enregistrement tmp;
+        if (commandHashMap.containsKey("enregistre")) {
+            tmp = (Enregistrement) this.commandHashMap.get("enregistre");
+            tmp.setValeur(valeur);
+        }
     }
 
     public void execute(String commandName) {

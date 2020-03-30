@@ -3,9 +3,12 @@ public enum CalculatriceRPN {
     CALCULATRICE_RPN;
 
     private void run() throws PileException, OutOfBoundsException{
-        SaisieRPN S  = new SaisieRPN();
-        double resultat = S.calcul();
-        System.out.println(resultat);
+        MoteurRPN m = new MoteurRPN();
+        SaisieRPN S = new SaisieRPN(m);
+        while (true) {
+            S.entree();
+        }
+
     }
 
     public static void main(String[] args) throws PileException, OutOfBoundsException {

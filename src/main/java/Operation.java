@@ -27,8 +27,22 @@ public enum Operation {
      *
      * @param s le symbole qui doit être stocké.
      */
-    Operation(String s){
+    Operation(String s) {
         this.symbole = s;
+    }
+
+    public static boolean isSymbole(String aVerifier) {
+        for (Operation op : values()) {
+            if (aVerifier.equals(op.getSymbole())) return true;
+        }
+        return false;
+    }
+
+    public static Operation getOperation(String symbole) {
+        for (Operation op : values()) {
+            if (symbole.equals(op.getSymbole())) return op;
+        }
+        throw new IllegalArgumentException();
     }
 
     /**
@@ -36,7 +50,9 @@ public enum Operation {
      *
      * @return Le symbole.
      */
-    public String getSymbole(){return symbole;}
+    public String getSymbole() {
+        return symbole;
+    }
 
     /**
      * Fonction abstraite d'évaluation redéfinie pour chaque elément de l'opération.
