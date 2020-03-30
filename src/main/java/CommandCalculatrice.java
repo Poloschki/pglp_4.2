@@ -1,7 +1,15 @@
-import java.util.HashMap;
+public class CommandCalculatrice extends Interpreter {
 
-public class CommandCalculatrice {
-    private final HashMap<String, Command> commandHashMap = new HashMap<>();
+
+    public CommandCalculatrice() {
+        commandHashMap.put("undo", new Undo(this));
+        commandHashMap.put("quit", new Quit(this));
+        commandHashMap.put("+", new CommandOperation(Operation.PLUS, this));
+        commandHashMap.put("-", new CommandOperation(Operation.MOINS, this));
+        commandHashMap.put("*", new CommandOperation(Operation.MULT, this));
+        commandHashMap.put("/", new CommandOperation(Operation.DIV, this));
+
+    }
 
     public void register(String oommandName, Command command) {
         commandHashMap.put(oommandName, command);
@@ -15,4 +23,3 @@ public class CommandCalculatrice {
         command.execute();
     }
 }
-// regarder le site et faire du même style !! 
