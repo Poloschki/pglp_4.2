@@ -1,14 +1,14 @@
 public class Undo implements Command {
 
-    private MoteurRPN moteurRPN;
+  private MoteurRPN moteurRpn;
 
-    public Undo(MoteurRPN moteurRPN) {
-        this.moteurRPN = moteurRPN;
-    }
+  public Undo(MoteurRPN moteurRpn) {
+    this.moteurRpn = moteurRpn;
+  }
 
-    @Override
-    public void execute() {
-        this.moteurRPN.undo();
-        System.out.println(this.moteurRPN.current);
-    }
+  @Override
+  public void execute() {
+    this.moteurRpn.undo();
+    System.out.println(this.moteurRpn.current);
+  }
 }

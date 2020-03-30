@@ -1,5 +1,5 @@
 interface Command {
 
-    void execute();
+  void execute();
 
 }
