@@ -1,4 +1,4 @@
-#Mon Mar 30 18:31:19 CEST 2020
+#Mon Mar 30 22:10:08 CEST 2020
 /home/patrick/Documents/szkola/Master/S2/PROGL/pglp_4.2/src/main/java/Quit.java=1585583137000
 module-resource*?\:checkstyle-suppressions.xml=D333901EB3F0391C9C6350251BF1FD08C5AB82CF
 /home/patrick/Documents/szkola/Master/S2/PROGL/pglp_4.2/src/main/java/Command.java=1585585512000
@@ -7,10 +7,10 @@ module-resource*?\:checkstyle-suppressions.xml=D333901EB3F0391C9C6350251BF1FD08C
 /home/patrick/Documents/szkola/Master/S2/PROGL/pglp_4.2/src/main/java/CalculatriceRpn.java=1585584379000
 /home/patrick/Documents/szkola/Master/S2/PROGL/pglp_4.2/src/main/java/Interpreter.java=1585583137000
 /home/patrick/Documents/szkola/Master/S2/PROGL/pglp_4.2/src/main/java/CommandQuit.java=1585583137000
-/home/patrick/Documents/szkola/Master/S2/PROGL/pglp_4.2/src/main/java/Undo.java=1585583318000
 /home/patrick/Documents/szkola/Master/S2/PROGL/pglp_4.2/src/main/java/Enregistrement.java=1585585827000
-/home/patrick/Documents/szkola/Master/S2/PROGL/pglp_4.2/src/main/java/OutOfBoundsException.java=1585583137000
+/home/patrick/Documents/szkola/Master/S2/PROGL/pglp_4.2/src/main/java/Undo.java=1585583318000
 /home/patrick/Documents/szkola/Master/S2/PROGL/pglp_4.2/src/main/java/Operation.java=1585583880000
-module-resource*?\:checkstyle-xpath-suppressions.xml=8F86403FE7A7618DCEEEE96138454D75E1906104
-configuration*?=C802138B266754C880FAB61AB9BB376A8802F723
+/home/patrick/Documents/szkola/Master/S2/PROGL/pglp_4.2/src/main/java/OutOfBoundsException.java=1585583137000
 /home/patrick/Documents/szkola/Master/S2/PROGL/pglp_4.2/src/main/java/CommandCalculatrice.java=1585585343000
+configuration*?=C802138B266754C880FAB61AB9BB376A8802F723
+module-resource*?\:checkstyle-xpath-suppressions.xml=8F86403FE7A7618DCEEEE96138454D75E1906104

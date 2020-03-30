@@ -1,7 +1,7 @@
 import java.util.Stack;
 
 public class Enregistrement implements Command {
-  private double valeur;
+  protected double valeur;
   private MoteurRPN rpn;
 
   public Enregistrement(MoteurRPN rpn, double valeur) {
